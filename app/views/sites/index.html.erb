@@ -1,4 +1,21 @@
-<h1>Sites#index</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MisfinanzasRuizAbraham</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+
+
+   <h1>Sites#index</h1>
 <p>Find me in app/views/sites/index.html.erb</p>
 <% if usuario_signed_in? then %>
   Bienvenido <%= current_usuario&.email %><br />
@@ -6,3 +23,8 @@
 <% else %>
   <%= link_to "Ingresar", :new_usuario_session %>
 <% end %>
+
+
+    <%= yield %>
+  </body>
+</html>
