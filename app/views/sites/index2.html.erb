@@ -11,12 +11,8 @@
 
   </head>
 
-  <body background: #FFEFBA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
->
-
-
+  <body>
+  <header>
     <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
       <div class="container-fluid">
             <a class="navbar-brand" href="#">Mis Finanzas</a>
@@ -41,15 +37,16 @@ background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, F
             </div>
         </div>
      </nav>
+    </header>
 
-      <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="container">
+          <div class="row">
+             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
+             </div>
+          </div>
+          <h1>¡Ten el control de tus gastos e ingresos hoy!</h1>
         </div>
-      </div>
-      <h1>¡Hola mundo!</h1>
-    </div>
 
     <!-- Librería jQuery requerida por los plugins de JavaScript -->
     <script src="http://code.jquery.com/jquery.js"></script>
@@ -58,5 +55,15 @@ background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, F
          incluir archivos JavaScript individuales de los únicos
          plugins que utilices) -->
     <script src="js/bootstrap.min.js"></script>
+
+
+  <% if usuario_signed_in? then %>
+  <B>Bienvenido  <%= current_usuario&.email %></B><br/>
+  <%= link_to "Salir", :destroy_usuario_session, method: :delete %>
+<% else %>
+  <%= link_to "Ingresar", :new_usuario_session %>
+<% end %>
+<%= yield %>
+
   </body>
 </html>
