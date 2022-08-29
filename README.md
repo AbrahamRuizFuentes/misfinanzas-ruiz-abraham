@@ -1,25 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicación web para registrar los ingresos y egresos
 
-Things you may want to cover:
+creada con Ruby on Rails, con base de datos postgrsql, Html5, bootstrap, comando generadores de controladores, modelos, scaffolds.
 
-* Ruby version
+Por algun motivo los link en heroku no anren, es por eso que está en github.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
 # misfinanzas-ruiz-abraham
