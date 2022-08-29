@@ -23,14 +23,15 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
-# Bootstrap 4
-gem 'bootstrap', '~> 4.4.1'
+# Bootstrap 5
+#gem 'bootstrap', '~> 5.2.0'
+gem 'bootstrap', '~> 5.2'
 
 # Popper_js
-gem 'popper_js', '~> 1.16'
+gem 'popper_js', '~> 2.11', '>= 2.11.5'
 
 # Jquery-rails
-gem 'jquery-rails', '~> 4.3.5'
+gem 'jquery-rails', '~> 4.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
