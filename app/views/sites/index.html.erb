@@ -66,10 +66,25 @@
 
   <% if usuario_signed_in? then %>
   <B>Bienvenido  <%= current_usuario&.email %></B><br/>
+  <div class="col-auto p-5 text-center">
+
+
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/incomes"> <h1> <b>Ingresos</b></h1></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/expenses"><h1><b>Egresos</b></h1></a>
+                </li>
+
+
+
+
   <%= link_to "Salir", :destroy_usuario_session, method: :delete %>
 <% else %>
   <%= link_to "Ingresar", :new_usuario_session %>
 <% end %>
+ </div>
 <%= yield %>
 
   </body>
